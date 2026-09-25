@@ -46,3 +46,4 @@ Use an available simulator name if `PairShift iPhone 15` is not installed. The p
 `Docs/BUILD.md` records actual validation and limits. Physical iPhone testing is the next acceptance step for touch feel, haptics, sound balance, frame pacing and energy use.
 
 This milestone includes the complete twenty-puzzle Journey. Daily, Expert, accounts, store, analytics, cloud services and App Store submission are future work.
+# PairShift
