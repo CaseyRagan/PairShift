@@ -1,0 +1,24 @@
+# Base44 dev environment for PairShift.
+#
+# PairShift is a NATIVE iOS app (SwiftUI + SpriteKit). The game UI requires
+# Apple frameworks (SwiftUI, SpriteKit, UIKit, CoreHaptics, AVFoundation) that
+# only build on macOS/iOS and cannot be served as a web page — so there is no
+# web preview on port 3000.
+#
+# What CAN run on Linux is the pure-Swift puzzle engine (PairShiftCore) and the
+# level verifier (PairShiftVerifier) — both import only Foundation. This compose
+# file provides a Swift toolchain container for building, testing, and verifying
+# the engine. To see the actual game, open PairShift.xcodeproj in Xcode and run
+# an iPhone simulator.
+
+services:
+  swift:
+    image: swift:6.0-jammy
+    working_dir: /work
+    volumes:
+      - .:/work
+      - swift-build:/work/.build
+    command: tail -f /dev/null  # keep alive for on-demand swift build/test/verify
+
+volumes:
+  swift-build:

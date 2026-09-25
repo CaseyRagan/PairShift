@@ -1,0 +1,7 @@
+{
+  "previewPort": 3000,
+  "healthPath": "/",
+  "startCommand": "docker compose -f docker-compose.base44.yml up -d",
+  "secrets": [],
+  "notes": "Native iOS app (SwiftUI + SpriteKit). No web server or web preview. The Swift engine (PairShiftCore) and verifier build/test on Linux via the swift service; the game UI requires Xcode + iOS simulator."
+}

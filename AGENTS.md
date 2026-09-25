@@ -13,3 +13,8 @@ Native portrait iPhone puzzle game. Product intent is in `Docs/PRODUCT.md`; curr
 - Preserve the image-generation prompt and provenance for project art in `Docs/ART.md`.
 - Make no claim of physical-device performance until measured on a device. Simulator evidence must be labeled.
 - Keep handoff documentation current so another model can continue without recreating decisions.
+
+## Base44 environment (Linux sandbox)
+- The game UI (App/) requires Apple frameworks and cannot build or run on Linux — only Xcode + iOS simulator can show it.
+- PairShiftCore and PairShiftVerifier import only Foundation and build/test/verify on Linux via `docker compose -f docker-compose.base44.yml exec swift swift test` and `... swift run pairshift-verify`.
+- There is no web preview on port 3000 for this project.
